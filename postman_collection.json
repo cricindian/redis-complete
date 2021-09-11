@@ -1,0 +1,74 @@
+{
+  "info": {
+    "_postman_id": "ed872234-31fd-4f53-abf1-c8614de6a4f4",
+    "name": "RedisDemo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Add_New_Product",
+      "id": "b701e882-0140-47cb-8677-ef23383fc04e",
+      "request": {
+        "method": "POST",
+        "header": [
+
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\" : 800001,\r\n    \"name\" : \"product 1\",\r\n    \"description\" : \"product 1 description\",\r\n    \"price\" : 100,\r\n    \"items\" : [\r\n        {\r\n            \"id\" : 100001,\r\n            \"productId\" : 800001,\r\n            \"price\" : 100,\r\n            \"size\" : \"small\"\r\n        },\r\n        {\r\n        \"id\": 100002,\r\n        \"productId\": 800001,\r\n        \"price\": 100.0,\r\n        \"size\": \"medium\"\r\n    }\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:8085/v1/products"
+      },
+      "response": [
+
+      ]
+    },
+    {
+      "name": "Get_Product_ById",
+      "id": "f2173369-9b8e-4f00-b5ab-4884a982368c",
+      "request": {
+        "method": "GET",
+        "header": [
+
+        ],
+        "url": "http://localhost:8085/v1/products/800001"
+      },
+      "response": [
+
+      ]
+    },
+    {
+      "name": "Get_Items_IN_Product_By_PID",
+      "id": "7130ffd5-91b6-44a8-8a3e-6da6a4cfb5e2",
+      "request": {
+        "method": "GET",
+        "header": [
+
+        ],
+        "url": "http://localhost:8085/v1/products/800001/items"
+      },
+      "response": [
+
+      ]
+    },
+    {
+      "name": "Get_Item_By_ProductId_And_ItemId",
+      "id": "965bbe71-5cd1-4ff6-abe7-9512794c5597",
+      "request": {
+        "method": "GET",
+        "header": [
+
+        ],
+        "url": "http://localhost:8085/v1/products/800001/items/100001"
+      },
+      "response": [
+
+      ]
+    }
+  ]
+}
